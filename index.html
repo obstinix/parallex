@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Depth — Parallax Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-glow" data-cursor-glow aria-hidden="true"></div>
+    <div class="scroll-progress" role="presentation" aria-hidden="true">
+      <span class="scroll-progress__bar"></span>
+    </div>
+
+    <header class="site-header" data-parallax="header">
+      <a href="#" class="logo">
+        <span class="logo__mark"></span>
+        <span class="logo__text">Depth</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#layers">Layers</a>
+        <a href="#spectrum">Spectrum</a>
+        <a href="#horizon">Horizon</a>
+        <a href="#pulse">Pulse</a>
+        <a href="#orbit">Orbit</a>
+        <a href="#contact" class="nav__cta">Connect</a>
+      </nav>
+      <div class="header-tools">
+        <button
+          type="button"
+          class="theme-toggle"
+          data-theme-toggle
+          aria-label="Cycle color theme"
+          title="Cycle color theme"
+        >
+          <span class="theme-toggle__swatch" aria-hidden="true"></span>
+          <span class="theme-toggle__label">Theme</span>
+        </button>
+        <button
+          type="button"
+          class="mode-btn dark-toggle"
+          id="darkModeToggle"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          <span class="toggle-icon">&#9790;</span>
+        </button>
+        <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="top" aria-label="Introduction">
+        <div class="hero__bg">
+          <div class="hero__mesh" data-depth="0.08" aria-hidden="true"></div>
+          <div class="hero__grid" data-depth="0.15"></div>
+          <div class="hero__glow hero__glow--1" data-depth="0.25"></div>
+          <div class="hero__glow hero__glow--2" data-depth="0.35"></div>
+          <div class="hero__glow hero__glow--3" data-depth="0.28"></div>
+          <div class="hero__orb" data-depth="0.5"></div>
+        </div>
+        <div class="hero__content">
+          <p class="hero__eyebrow reveal" data-reveal>
+            <span>Parallax web experience</span>
+          </p>
+          <h1 class="hero__title">
+            <span class="hero__line reveal" data-reveal data-delay="1">Motion</span>
+            <span class="hero__line reveal" data-reveal data-delay="2"><span class="hero__line--in">in </span><span class="hero__line--accent">depth</span></span>
+          </h1>
+          <p class="hero__lead reveal" data-reveal data-delay="3">
+            Scroll to peel back layers of space, light, and typography — built with performant transforms
+            and scroll-linked storytelling.
+          </p>
+          <div class="hero__actions reveal" data-reveal data-delay="4">
+            <a href="#layers" class="btn btn--primary">Explore layers</a>
+            <a href="#horizon" class="btn btn--ghost">See horizon</a>
+          </div>
+        </div>
+        <div class="hero__scroll-hint" aria-hidden="true">
+          <span>Scroll</span>
+          <span class="hero__scroll-line"></span>
+        </div>
+      </section>
+
+      <section class="sticky-wrap" id="layers" aria-labelledby="layers-heading">
+        <div class="sticky-wrap__inner">
+          <div class="sticky-panel" data-sticky-panel>
+            <div class="sticky-panel__visual" data-sticky-visual>
+              <div class="stack stack--back" data-stack-depth="0.2"></div>
+              <div class="stack stack--mid" data-stack-depth="0.45"></div>
+              <div class="stack stack--front" data-stack-depth="0.75"></div>
+              <div class="stack__label">Layer 03</div>
+            </div>
+            <div class="sticky-panel__copy">
+              <h2 id="layers-heading" class="section-title reveal" data-reveal>Layered depth</h2>
+              <p class="section-lead reveal" data-reveal>
+                Each plane moves at a different rate. The illusion of depth comes from relative motion — not
+                from heavy imagery alone.
+              </p>
+              <ul class="meta-list reveal" data-reveal>
+                <li><strong>GPU</strong> translate3d</li>
+                <li><strong>RAF</strong> scroll sync</li>
+                <li><strong>Reduced motion</strong> respected</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="spectrum" id="spectrum" aria-labelledby="spectrum-heading">
+        <div class="spectrum__bg">
+          <div class="spectrum__blob spectrum__blob--1" data-spectrum-depth="0.12"></div>
+          <div class="spectrum__blob spectrum__blob--2" data-spectrum-depth="0.22"></div>
+          <div class="spectrum__blob spectrum__blob--3" data-spectrum-depth="0.18"></div>
+        </div>
+        <div class="spectrum__inner">
+          <p class="spectrum__eyebrow reveal" data-reveal>Chromatic depth</p>
+          <h2 id="spectrum-heading" class="spectrum__title reveal" data-reveal data-anime="split">
+            A full spectrum of motion
+          </h2>
+          <p class="spectrum__lead reveal" data-reveal>
+            Gradient meshes, layered glows, and theme presets keep the page lively without sacrificing
+            readability.
+          </p>
+          <div class="spectrum__chips">
+            <span class="chip chip--cyan reveal" data-reveal data-anime="ambient">Aurora mesh</span>
+            <span class="chip chip--magenta reveal" data-reveal data-anime="ambient">Neon accents</span>
+            <span class="chip chip--lime reveal" data-reveal data-anime="ambient">Scroll sync</span>
+            <span class="chip chip--amber reveal" data-reveal data-anime="ambient">GPU layers</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee-section" aria-hidden="true">
+        <div class="marquee" data-marquee>
+          <div class="marquee__track">
+            <span>Parallax</span>
+            <span>·</span>
+            <span>Depth</span>
+            <span>·</span>
+            <span>Motion</span>
+            <span>·</span>
+            <span>Scroll</span>
+            <span>·</span>
+            <span>Layers</span>
+            <span>·</span>
+            <span>Parallax</span>
+            <span>·</span>
+            <span>Depth</span>
+            <span>·</span>
+            <span>Motion</span>
+            <span>·</span>
+            <span>Scroll</span>
+            <span>·</span>
+            <span>Layers</span>
+            <span>·</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="horizon" id="horizon" aria-labelledby="horizon-heading">
+        <div class="horizon__bg">
+          <div class="horizon__line" data-horizon-line></div>
+          <div class="horizon__sun" data-horizon-sun></div>
+        </div>
+        <div class="horizon__content">
+          <h2 id="horizon-heading" class="horizon__title reveal" data-reveal data-anime="split">The horizon line</h2>
+          <p class="horizon__text reveal" data-reveal>
+            Parallax is not only vertical. This band uses horizontal drift and a rising light source tied to
+            your scroll position.
+          </p>
+        </div>
+      </section>
+
+      <section class="pulse" id="pulse" aria-labelledby="pulse-heading">
+        <div class="pulse__inner">
+          <h2 id="pulse-heading" class="section-title reveal" data-reveal>Motion by the numbers</h2>
+          <p class="section-lead reveal" data-reveal>
+            Counters fire once when this band enters view — a small reward for scrolling deeper.
+          </p>
+          <div class="pulse__grid">
+            <div class="pulse-card pulse-card--a reveal" data-reveal>
+              <span class="pulse-card__value"><span data-count="60">0</span> fps</span>
+              <span class="pulse-card__label">Target frame budget</span>
+            </div>
+            <div class="pulse-card pulse-card--b reveal" data-reveal>
+              <span class="pulse-card__value"><span data-count="12">0</span> layers</span>
+              <span class="pulse-card__label">Parallax planes in hero</span>
+            </div>
+            <div class="pulse-card pulse-card--c reveal" data-reveal>
+              <span class="pulse-card__value"><span data-count="4">0</span> themes</span>
+              <span class="pulse-card__label">Color moods to explore</span>
+            </div>
+            <div class="pulse-card pulse-card--d reveal" data-reveal>
+              <span class="pulse-card__value"><span data-count="100">0</span>%</span>
+              <span class="pulse-card__label">Passion for oversaturated glows</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cards-parallax" id="orbit" aria-labelledby="orbit-heading">
+        <div class="cards-parallax__header">
+          <h2 id="orbit-heading" class="section-title reveal" data-reveal>Orbital cards</h2>
+          <p class="section-lead reveal" data-reveal>
+            Hover to tilt; scroll to shift perspective. Each card carries a subtle parallax offset.
+          </p>
+        </div>
+        <div class="cards-parallax__grid">
+          <article class="tilt-card tilt-card--cyan" data-tilt data-depth-card="0.08" data-anime="card">
+            <div class="tilt-card__inner">
+              <span class="tilt-card__index">01</span>
+              <h3>Velocity</h3>
+              <p>Speed-mapped transforms keep motion smooth on modest devices.</p>
+            </div>
+          </article>
+          <article class="tilt-card tilt-card--magenta" data-tilt data-depth-card="0.12" data-anime="card">
+            <div class="tilt-card__inner">
+              <span class="tilt-card__index">02</span>
+              <h3>Focus</h3>
+              <p>Foreground elements lead the eye; background layers support the story.</p>
+            </div>
+          </article>
+          <article class="tilt-card tilt-card--lime" data-tilt data-depth-card="0.1" data-anime="card">
+            <div class="tilt-card__inner">
+              <span class="tilt-card__index">03</span>
+              <h3>Contrast</h3>
+              <p>Now with bolder hues — each card carries its own accent lane.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-parallax" aria-label="Split narrative">
+        <div class="split-parallax__col split-parallax__col--visual">
+          <div class="split-parallax__frame" data-split-frame>
+            <div class="split-parallax__layer split-parallax__layer--a" data-split-depth="0.2"></div>
+            <div class="split-parallax__layer split-parallax__layer--b" data-split-depth="0.5"></div>
+            <div class="split-parallax__layer split-parallax__layer--c" data-split-depth="0.85"></div>
+          </div>
+        </div>
+        <div class="split-parallax__col split-parallax__col--text">
+          <h2 class="section-title reveal" data-reveal>Split field</h2>
+          <p class="section-lead reveal" data-reveal>
+            A contained “window” scrolls faster than its frame, creating a miniature parallax stage beside
+            static copy.
+          </p>
+          <blockquote class="pullquote reveal" data-reveal>
+            “Good parallax feels like looking through glass, not riding a roller coaster.”
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="cta" id="contact" aria-labelledby="cta-heading">
+        <div class="cta__glow" data-cta-glow></div>
+        <div class="cta__inner">
+          <h2 id="cta-heading" class="cta__title reveal" data-reveal data-anime="split">Build your own depth</h2>
+          <p class="cta__text reveal" data-reveal>
+            Use this page as a template: adjust depth multipliers, swap palettes, and tune motion for your
+            brand.
+          </p>
+          <a href="#top" class="btn btn--primary btn--large reveal" data-reveal>Back to top</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Parallax Webpage — Web Technology demo · <span id="year"></span></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/three-scene.js"></script>
+    <script src="js/anime-effects.js"></script>
+  </body>
+</html>
