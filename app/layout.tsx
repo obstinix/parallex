@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Depth — Cinematic Parallax Experience',
   description: 'An interactive cinematic scroll experience — every pixel choreographed, every transition intentional. Built with Next.js 15, GSAP, Three.js, and GLSL shaders.',
   keywords: ['parallax', 'cinematic', 'scroll', 'webgl', 'gsap', 'three.js', 'interactive', 'experience'],
-  authors: [{ name: 'Antigravity Agent' }],
+  authors: [{ name: 'obstinix' }],
   openGraph: {
     title: 'Depth — Cinematic Parallax Experience',
     description: 'An interactive cinematic scroll experience built with Next.js, GSAP, and Three.js.',

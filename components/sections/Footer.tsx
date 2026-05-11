@@ -15,44 +15,55 @@ export function Footer() {
         margin: '0 auto',
       }}
     >
-      <p style={{
-        fontSize: '0.8rem',
-        color: 'var(--text-muted)',
-        fontWeight: 500,
-      }}>
-        © {new Date().getFullYear()} Depth — Built with{' '}
-        <span style={{ color: 'var(--accent)' }}>Antigravity</span>
-      </p>
+      <span>© 2026 obstinix — All rights reserved</span>
 
       <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-        {[
-          { label: 'GitHub', href: 'https://github.com/obstinix/parallex' },
-          { label: 'Source', href: 'https://github.com/obstinix/parallex' },
-        ].map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              fontSize: '0.75rem',
-              color: 'var(--text-secondary)',
-              textDecoration: 'none',
-              fontWeight: 500,
-              letterSpacing: '0.04em',
-              textTransform: 'uppercase',
-              transition: 'color 0.2s',
-            }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLElement).style.color = 'var(--accent)'
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.color = 'var(--text-secondary)'
-            }}
-          >
-            {link.label}
-          </a>
-        ))}
+        <a
+          href="https://github.com/obstinix/parallex"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer-link"
+          style={{
+            fontSize: '0.75rem',
+            color: 'var(--text-secondary)',
+            textDecoration: 'none',
+            fontWeight: 500,
+            letterSpacing: '0.04em',
+            textTransform: 'uppercase',
+            transition: 'color 0.2s',
+          }}
+          onMouseEnter={(e) => {
+            (e.target as HTMLElement).style.color = 'var(--accent)'
+          }}
+          onMouseLeave={(e) => {
+            (e.target as HTMLElement).style.color = 'var(--text-secondary)'
+          }}
+        >
+          GITHUB
+        </a>
+        <a
+          href="https://github.com/obstinix/parallex/tree/main"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer-link"
+          style={{
+            fontSize: '0.75rem',
+            color: 'var(--text-secondary)',
+            textDecoration: 'none',
+            fontWeight: 500,
+            letterSpacing: '0.04em',
+            textTransform: 'uppercase',
+            transition: 'color 0.2s',
+          }}
+          onMouseEnter={(e) => {
+            (e.target as HTMLElement).style.color = 'var(--accent)'
+          }}
+          onMouseLeave={(e) => {
+            (e.target as HTMLElement).style.color = 'var(--text-secondary)'
+          }}
+        >
+          SOURCE
+        </a>
       </div>
     </footer>
   )
